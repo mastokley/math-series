@@ -3,7 +3,7 @@ __pycache__
 /lib/
 /bin/
 /pip-selfcheck.json
-
 /Scripts/
 
 .cache
+*.pyc
