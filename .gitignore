@@ -1,5 +1,10 @@
 __pycache__
-include/
-lib/
-bin/
-pip-selfcheck.json
+/include/
+/lib/
+/bin/
+/pip-selfcheck.json
+
+/Scripts/
+/.idea/
+
+.cache
