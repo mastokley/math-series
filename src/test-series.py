@@ -1,4 +1,6 @@
+# coding=utf-8
 import pytest
+
 
 FIB_TABLE = [
     (0, 0),
@@ -13,6 +15,7 @@ FIB_TABLE = [
     (9, 34),
 ]
 
+
 LUCAS_TABLE = [
     (0, 2),
     (1, 1),
@@ -26,7 +29,8 @@ LUCAS_TABLE = [
     (9, 76)
 ]
 
+
 @pytest.mark.parametrize('n, result', FIB_TABLE)
 def test_fib(n, result):
     import series
-    assert fibonacci(n) == result
+    assert series.fibonacci(n) == result
