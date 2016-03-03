@@ -70,7 +70,11 @@ SUM_SERIES_TABLE = [
     (4, 1, 8, 26),
     (5, 1, 8, 43),
     (6, 1, 8, 69),
-    (7, 1, 8, 112)
+    (7, 1, 8, 112),
+    (2, 32, 42, 74),  # more random tests
+    (5, 23, -8, 29),  # 23 -8 15 7 22 >29<
+    (4, -9, -11, -51),  # -9, -11, -20, -31, >-51<
+    (20, 0, 0, 0)
 ]
 
 
@@ -78,3 +82,15 @@ SUM_SERIES_TABLE = [
 def test_sum_series(n, first, second, result):
     import series
     assert series.sum_series(n, first, second) == result
+
+
+@pytest.mark.parametrize('n, result', FIB_TABLE)
+def test_sum_series_partial_1(n, result):
+    import series
+    assert series.sum_series(n) == result
+
+
+@pytest.mark.parametrize('n, result', LUCAS_TABLE)
+def test_sum_series_partial_2(n, result):
+    import series
+    assert series.sum_series(n, 2) == result

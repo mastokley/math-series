@@ -21,7 +21,7 @@ def lucas(n):
         return lucas(n - 1) + lucas(n - 2)
 
 
-def sum_series(n, first=0, second=2):
+def sum_series(n, first=0, second=1):
     """Return the nth value of a series that sums the same way as the Fibonacci
     series, but with different values for the first and second numbers in the
     series.
